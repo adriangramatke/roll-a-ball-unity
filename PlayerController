@@ -33,8 +33,6 @@ public class PlayerController : MonoBehaviour {
 
         Instantiate(PickUpCylinder, new Vector3(8,0.5f,8), Quaternion.identity);
         Instantiate(PickUpCylinder, new Vector3(-8,0.5f,-8), Quaternion.identity);
-        Instantiate(PickUpCylinder, new Vector3(8,0.5f,-8), Quaternion.identity);
-        Instantiate(PickUpCylinder, new Vector3(-8,0.5f,8), Quaternion.identity);
     }
 
     void FixedUpdate ()
@@ -46,7 +44,7 @@ public class PlayerController : MonoBehaviour {
 
         rb.AddForce (movement * speed);
 
-        if (score >= 24) {
+        if (score >= 18) {
             StartCoroutine(wait());
         }
     }
